@@ -21,7 +21,7 @@ const Products = ({
   const { clothes } = useContext(Context)
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const [itemTotal, setItemTotal] = useState(null);
+  const [itemTotal, setItemTotal] = useState(0);
   const [clothingItems, setClothingItems] = useState<Array<ProductCardProps>>(() => setClothingItemsHandler())
 
   useEffect(() => {

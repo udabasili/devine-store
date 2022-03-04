@@ -35,7 +35,7 @@ const Filters = ({
   const router = useRouter();
   
   const [selectedCategoryType, setSelectedCategoryIndex] = useState<categories>(router.query.state ? router.query.state as categories: 'all')
-  const [selectedColor, setSelectedColor] = useState(undefined)
+  const [selectedColor, setSelectedColor] = useState<string | undefined>(undefined)
   const { setFilter, clothes } = useContext(Context)
   console.log(router.query?.state)
   const countColors = (label: string) => {
@@ -47,7 +47,7 @@ const Filters = ({
     const filter = {
       price: values,
       category: selectedCategoryType,
-      color: selectedColor ? selectedColor : undefined
+      color: selectedColor 
     }
     setFilter(filter)
   }, [selectedCategoryType, values, selectedColor])
@@ -171,6 +171,7 @@ const Filters = ({
             <div className="u-margin-top-medium">
               <Button 
               variant="dark" 
+              type='button'
               onClickHandler={() => setSelectedColor(undefined)}
               size="lg" >
                 Reset

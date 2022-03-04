@@ -17,7 +17,7 @@ const ProductCard = ({
         router.push(`/products/${id}`)
     }
     return (
-        <ProductCardContainer image={imageUrl} onClick={() => handlerRoute()}>
+        <ProductCardContainer  onClick={() => handlerRoute()}>
             <Image
                 alt={name}
                 src={imageUrl}

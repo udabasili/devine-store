@@ -14,7 +14,6 @@
     "@plaiceholder/next": "^2.3.0",
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.23.0",
-    "aos": "^2.3.4",
     "axios": "^0.26.0",
     "firebase": "^9.6.7",
     "firebase-admin": "^10.0.2",
@@ -37,7 +36,6 @@
     "zod-formik-adapter": "^1.0.2"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4",
     "@types/react": "^17.0.39",
     "@types/styled-components": "^5.1.24",
     "msw": "^0.38.1",

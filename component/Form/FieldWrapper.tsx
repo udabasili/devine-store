@@ -18,7 +18,7 @@ const FieldWrapper = (props: FieldWrapperProps) => {
         <FormControl>
             <FormLabel htmlFor={name}>{label}</FormLabel>
             {children}
-            <FormError name={name} role="alert" />
+            <FormError name={name} />
         </FormControl>
     )
 }

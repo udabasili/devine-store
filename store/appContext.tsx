@@ -22,11 +22,11 @@ type Actions =
 }
 | {
   type:  'FILTER_DATA'
-  payload: { category: string; color: string; price: number[] }
+  payload: { category: string; color: string | undefined; price: number[] }
 }
 
 type Filter = {
-  category: string; color: string; price: number[] 
+  category: string; color: string | undefined ; price: number[] 
 }
 
 type ProviderProps = {
@@ -51,8 +51,8 @@ const filterFunction = (value: Filter) => {
       filteredClothings = clothing[value.category].items
     }
   }
-  if (value.color) {
-    filteredClothings = filteredClothings.filter(clothing => clothing.name.toLowerCase().includes(value.color))
+  if (value.color && value.color !== undefined) {
+    filteredClothings = filteredClothings.filter(clothing => clothing.name.toLowerCase().includes(value.color as string))
   }
   if (value.price) {
     filteredClothings = filteredClothings.filter(clothing => {
@@ -93,15 +93,12 @@ const reducer = (state: State , action: Actions): State => {
         showDropDown: action.payload as boolean
       }
       case 'SET_USER':
-        console.log(action.payload)
         return {
           ...state,
           currentUser: action.payload,
           isAuthenticated: Object.keys(action.payload).length !== 0 
         }
         case 'FILTER_DATA':
-          console.log(3)
-
           const result = filterFunction(action.payload)
           return {
             ...state,

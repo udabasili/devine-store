@@ -19,8 +19,8 @@ const BlogArticles = () => {
         {
             blogArticle.filter((data, index) => index < 10).map((a, index) => {
 				const recordFind = _.get( a.record.domain_name, 'chicintuition')
-				let record;
-				let articleType;
+				let record: any;
+				let articleType: any;
 				if (recordFind){
 					record = Object.values(_.get( a.record.domain_name, 'chicintuition'))[0]
 					articleType = Object.keys(_.get( a.record.domain_name, 'chicintuition'))[0]

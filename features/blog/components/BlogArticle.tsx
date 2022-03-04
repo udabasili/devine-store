@@ -38,7 +38,7 @@ const BlogArticle = (props: BlogArticleProps) => {
 
     console.log(props)
     return (
-        <Blog articleType={articleType}>
+        <Blog >
             <BlogImage>
                 <Image
                     src={imageUrl}
@@ -63,7 +63,7 @@ const BlogArticle = (props: BlogArticleProps) => {
                     {content.substring(0, MAX_LENGTH_TEXT)}
                 </Paragraph>
             </BlogSummary>
-            <Button onClickHandler={navigation} variant="primary" size="lg">
+            <Button onClickHandler={navigation} variant="primary" size="lg" type='button'>
                 See More
             </Button>
         </Blog>

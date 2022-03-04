@@ -15,8 +15,7 @@ const CartItem = (props: CartItemProp) => {
     
     const removeItemFromCart = async () => {
         try {
-            const token = await auth.currentUser?.getIdToken(true)as string
-            await clearItemFromCart({itemId, token })
+            await clearItemFromCart(itemId)
             mutate('/api/cart')
         } catch (error) {
             const errorObject = error as Error

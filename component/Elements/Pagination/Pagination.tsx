@@ -22,7 +22,6 @@ function Pagination(props: PaginationProps) {
           pageRangeDisplayed={4}
           pageCount={pageCount}
           previousLabel={<AiFillCaretLeft size={'2rem'}/>}
-          renderOnZeroPageCount={null}
         />
     );
   }

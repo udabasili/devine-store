@@ -13,11 +13,11 @@ const BlogDetail = () => {
     const router = useRouter()
     const { id } = router.query 
     const getBlogArticle = blogArticle.find(article => article.record.uniq_id === id)   
-    const recordFind = _.get( getBlogArticle.record.domain_name, 'chicintuition')
-    let record;
-    let articleType;
+    const recordFind = _.get( getBlogArticle?.record.domain_name, 'chicintuition')
+    let record: any;
+    let articleType: any;
     if (recordFind){
-      record = Object.values(_.get( getBlogArticle.record.domain_name, 'chicintuition'))[0]
+      record = Object.values(_.get( getBlogArticle?.record.domain_name, 'chicintuition'))[0]
     }
 
 
@@ -64,7 +64,7 @@ const BlogDetail = () => {
     )
 }
  
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
      return {
          props: {}
      }

@@ -22,9 +22,9 @@ const schema = z.object({
 });
 
   
-const CheckOutForm = props => {
+const CheckOutForm = () => {
   return (
-    <Form<CheckoutFormValues> onSubmitHandler={undefined} schema={schema} initialValues={initialValues}>
+    <Form<CheckoutFormValues> onSubmitHandler={async (data: any) => {}} schema={schema} initialValues={initialValues}>
 		<InputField
 			label="Name"
 			name="name" 

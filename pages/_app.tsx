@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AppProps } from 'next/app'
 import { RouteGuard } from 'routes'
 import FirebaseAuthState from '@/features/auth/components/FirebaseAuthState'
-import AOS from 'aos';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -98,7 +97,6 @@ const theme = {
   },
 }
 
-AOS.init();
 
 // Custom App to wrap it with context provider
 export default function App({ Component, pageProps }: AppProps) {
