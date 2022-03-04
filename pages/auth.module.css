@@ -1,0 +1,21 @@
+.content {
+    display: grid;
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3vw;
+    grid-template-rows: max-content max-content max-content;
+    gap: 4rem;
+    padding: 2rem;
+    margin-top: 10rem;
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .content {
+        display: grid;
+        grid-column: center-start / center-end;
+        grid-template-columns: 1fr;
+        
+    }
+}

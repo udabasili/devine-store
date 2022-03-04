@@ -1,0 +1,14 @@
+.leftButton {
+    left: 3%
+}
+
+.rightButton {
+    right: 3%
+}
+.button {
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    cursor: pointer;
+    color: #6D72C3
+}

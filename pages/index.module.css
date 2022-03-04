@@ -1,0 +1,136 @@
+
+
+.header {
+    grid-column: full-start / full-end;
+    height: 70vh;
+    margin-top: 0;
+    margin-bottom: 75px;
+}
+
+.section {
+    padding: 0 7.5px 0 7.5px;
+    margin-top: 0;
+    margin-bottom: 75px;
+}
+
+.sectionSummary {
+    display: grid;
+    grid-column: center-start / center-end; 
+    height: 40vh;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .sectionSummary {
+        height: 70vh;
+    }
+}
+
+
+.sectionCategory {
+    display: grid;
+    grid-column: center-start / center-end; 
+    gap: 1rem;
+}
+
+.storyPictures {
+    display: grid;
+    grid-column: full-start / col-end 4; 
+    background-color: #fcddb9;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-size: cover;
+    height: 40vw;
+    background-image: url('https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=705&q=80');
+}
+
+@media screen and (max-width: 900px) {
+    .storyPictures {
+        height: unset;
+      
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .storyPictures {
+        display: grid;
+        grid-column: full-start / full-end; 
+        height: 100vw;
+      
+    }
+}
+
+.storyPictures > * {
+    justify-self: flex-start;
+}
+
+
+
+
+.storyContent {
+    grid-column: col-start 5 / full-end; 
+    background-color: #fcddb9;
+    padding: 6rem 8vw;
+    display: grid;
+    justify-items: flex-start;
+    grid-auto-rows: min-content min-content;
+    align-items: center;
+    
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .storyContent {
+        display: grid;
+        grid-column: full-start / full-end; 
+      
+    }
+}
+
+.storyContent h3 {
+    margin-bottom: 10px
+}
+
+.storyContent h2 {
+    margin-bottom: 3rem
+}
+
+.storyContent p {
+    margin-bottom: 4rem
+}
+
+.storyImage1 {
+    width: 100%;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.storyImage2 {
+    width: 115%;
+    grid-row: 4 / 7;
+    grid-column: 4 / 7;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .storyImage1 {
+        display: none
+    }
+    
+    .storyImage2 {
+        display: none
+    }
+}
+
+.sectionProducts {
+    display: grid;
+    grid-column: center-start / center-end; 
+    margin-top: 75px;
+
+}
