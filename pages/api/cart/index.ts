@@ -6,8 +6,6 @@ import User from "@/model/User";
 import dbConnect from "@/lib/dbConnect";
 import cors from "../middleware/cors";
 
-const db = adminDb;
-
 export default async function cartHandler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -40,7 +38,7 @@ export default async function cartHandler(
         res.status(200).json({ message: items});
         break;
       default:
-        res.setHeader("Allow", ["GET", "PUT"]);
+        res.setHeader("Allow", ["GET"]);
         res.status(405).end(`Method ${method} Not Allowed`);
     }
   } catch (error) {
