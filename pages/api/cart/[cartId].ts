@@ -12,7 +12,6 @@ export default async function cartHandler(req: NextApiRequest, res: NextApiRespo
     } = req
 
     let currentUser: AuthUser | null = null;
-    await cors(req, res)
     await dbConnect();
 
 

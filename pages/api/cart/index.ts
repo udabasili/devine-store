@@ -12,7 +12,6 @@ export default async function cartHandler(
 ) {
   try {
     const { method } = req;
-    await cors(req, res)
     await dbConnect();
 
 
