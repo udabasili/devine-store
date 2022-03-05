@@ -15,6 +15,7 @@ function initMiddleware(middleware: { (req: Cors.CorsRequest, res: { statusCode?
 const cors = initMiddleware(
   Cors({
     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 )
 
