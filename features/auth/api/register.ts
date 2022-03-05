@@ -9,13 +9,17 @@ export const registerWithEmailAndPassword = async (data: RegisterFormValues) => 
     const response  = await createUserWithEmailAndPassword(auth, data.email, data.password)
 
     const token = await auth.currentUser?.getIdToken(true)
-    return await axios.post('/api/auth/register',{
+
+    return await fetch('/api/auth/register',{
+        method: "POST",
+        body: JSON.stringify({
             uid: response.user.uid,
             ...data
-        }, {
+        }),
             headers: {
-                Authorization: token || '',
-            },
+                "Content-type": "application/json; charset=UTF-8",
+                Authorization: token || ''
+            }
         }
     )
 };
