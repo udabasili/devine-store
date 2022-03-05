@@ -1,10 +1,10 @@
 import { AuthUser } from "@/features/auth/type";
-import { adminAuth, adminDb } from "@/lib/firebaseAdmin";
+import { adminDb } from "@/lib/firebaseAdmin";
 import { NextApiRequest, NextApiResponse } from "next";
 import { checkAuth } from "../middleware/checkAuth";
 import User from "@/model/User";
 import dbConnect from "@/lib/dbConnect";
-import { CartItemProp } from "@/features/cart/types";
+import cors from "../middleware/cors";
 
 const db = adminDb;
 
@@ -14,6 +14,7 @@ export default async function cartHandler(
 ) {
   try {
     const { method } = req;
+    await cors(req, res)
     await dbConnect();
 
 

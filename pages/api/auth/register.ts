@@ -1,9 +1,11 @@
 import { adminAuth } from '@/lib/firebaseAdmin'
 import { NextApiRequest, NextApiResponse } from 'next'
+import cors from '../middleware/cors'
 
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
+      await cors(req, res)
       await adminAuth.updateUser(req.body.uid, {
           displayName: req.body.name
       })

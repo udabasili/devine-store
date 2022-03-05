@@ -3,6 +3,7 @@ import dbConnect from "@/lib/dbConnect";
 import User from "@/model/User";
 import { NextApiRequest, NextApiResponse } from "next"
 import { checkAuth } from "../middleware/checkAuth";
+import cors from "../middleware/cors";
 
 export default async function cartHandler(req: NextApiRequest, res: NextApiResponse) {
     const {
@@ -11,7 +12,9 @@ export default async function cartHandler(req: NextApiRequest, res: NextApiRespo
     } = req
 
     let currentUser: AuthUser | null = null;
+    await cors(req, res)
     await dbConnect();
+
 
     try {
       const response = await checkAuth(req, res);
