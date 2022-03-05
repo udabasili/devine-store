@@ -1,11 +1,11 @@
 import MainLayout from '@/components/Layout/MainLayout'
 import PageHeader from '@/components/PageHeader/PageHeader'
 import { useRouter } from 'next/router'
-import React, {  } from 'react'
+import React from 'react'
 import _ from "lodash";
 import { blogArticle } from '@/data/blogdata';
 import { Header2, Paragraph } from 'global.style';
-import { ArticleMainImage, ArticleOtherImages, ArticleText , Article} from './index.style';
+import { ArticleMainImage, ArticleOtherImages, ArticleText , Article} from '../../styles/blog-item.style';
 import Image from 'next/image'
 
 const BlogDetail = () => {

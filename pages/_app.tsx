@@ -5,7 +5,7 @@ import { FuegoProvider } from 'swr-firestore-v9'
 import { fuego } from '../lib/firebaseClient'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { device } from '@/utils/responsiveBreakpoints'
-import './app.css'
+import '../styles/app.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AppProps } from 'next/app'

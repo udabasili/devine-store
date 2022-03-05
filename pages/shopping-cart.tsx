@@ -2,7 +2,7 @@ import Tabs from '@/components/Elements/Tabs/Tabs'
 import MainLayout from '@/components/Layout/MainLayout'
 import React from 'react'
 import { FaShoppingBag } from 'react-icons/fa'
-import style from './shopping-cart.module.css'
+import style from '../styles/shopping-cart.module.css'
 import { MdOutlineLocalShipping, MdPayments } from "react-icons/md";
 import CheckOutItem from '@/features/checkout/components/CheckOutItem'
 import FullScreenLoader from '@/components/FullScreenLoader/FullScreenLoader'

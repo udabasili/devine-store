@@ -11,7 +11,7 @@ import {
   ProductQuantity,
   ProductSize,
   ProductSizes,
-} from "./index.style";
+} from "../../styles/index.style";
 import { getAllClothings } from "@/context/appContext";
 import { ProductCardProps } from "@/features/products/types";
 import Image from "next/image";

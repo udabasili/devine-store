@@ -1,7 +1,7 @@
 import MainLayout from '@/components/Layout/MainLayout'
 import SlideShow from '@/components/Slide/SlideShow'
 import { getPlaiceholder } from 'plaiceholder';
-import style from './index.module.css'
+import style from '../styles/index.module.css'
 import { jewelryData } from '@/data/slideData'
 import { InferGetStaticPropsType } from 'next';
 import SummaryCard from '@/features/categories/components/SummaryCard';

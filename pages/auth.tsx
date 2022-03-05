@@ -4,7 +4,7 @@ import Login from '@/features/auth/components/Login'
 import Register from '@/features/auth/components/Register'
 import { useRouter } from 'next/router'
 import React, { useContext, useEffect } from 'react'
-import style from './auth.module.css'
+import style from '../styles/auth.module.css'
 
 const Auth = () => {
   const {isAuthenticated} = useContext(Context)

@@ -2,7 +2,7 @@ import Tabs from '@/components/Elements/Tabs/Tabs'
 import MainLayout from '@/components/Layout/MainLayout'
 import React from 'react'
 import { FaShoppingBag } from 'react-icons/fa'
-import style from './tracking.module.css'
+import style from '../styles/tracking.module.css'
 import { MdOutlineLocalShipping, MdPayments } from "react-icons/md";
 
 const tabs = [

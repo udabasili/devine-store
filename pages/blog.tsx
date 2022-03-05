@@ -5,7 +5,7 @@ import BlogArticles from '@/features/blog/components/BlogArticles'
 import { Header3 } from 'global.style'
 import Image from 'next/image'
 import React from 'react'
-import style from './blog.module.css'
+import style from '../styles/blog.module.css'
 
 const Blog = () => {
   return (

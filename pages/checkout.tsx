@@ -2,7 +2,7 @@ import Tabs from '@/components/Elements/Tabs/Tabs'
 import MainLayout from '@/components/Layout/MainLayout'
 import React from 'react'
 import { FaShoppingBag } from 'react-icons/fa'
-import style from './checkout.module.css'
+import style from '../styles/checkout.module.css'
 import { MdOutlineLocalShipping, MdPayments } from "react-icons/md";
 import Stripe from '@/components/Stripe/Stripe'
 import { Elements } from '@stripe/react-stripe-js'

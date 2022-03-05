@@ -2,7 +2,7 @@ import Tabs from '@/components/Elements/Tabs/Tabs'
 import MainLayout from '@/components/Layout/MainLayout'
 import PageHeader from '@/components/PageHeader/PageHeader'
 import React from 'react'
-import style from './wishlist.module.css'
+import style from '../styles/wishlist.module.css'
 
 
 const Wishlist = () => {
