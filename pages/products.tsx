@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MainLayout from "@/components/Layout/MainLayout";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import Filters from "@/features/products/components/Filters";

@@ -10,6 +10,7 @@ export const CartIcon = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 4rem;
+    cursor: pointer ;
 
     @media ${device.tabletPort} {
         margin: 0

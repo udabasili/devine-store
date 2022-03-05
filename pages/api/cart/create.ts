@@ -34,7 +34,6 @@ export default async function cartHandler(
     }
   } catch (error) {
     const errorObject = error as Error;
-    console.log(errorObject.message);
     return res.status(500).json({
       message: errorObject.message,
     });

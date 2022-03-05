@@ -86,7 +86,7 @@ export const ProductQuantity = styled.div`
     grid-template-columns: max-content 1fr max-content;
     width: 50%;
     overflow: hidden;
-    justify-self: center;
+    justify-self: flex-end;
 
     .counter {
         border-top: 1px solid black;
@@ -123,6 +123,7 @@ export const ProductQuantity = styled.div`
 
 export const ProductButtons = styled.div`
     display: flex;
+    justify-content: flex-end ;
 
     a {
         flex: 1;

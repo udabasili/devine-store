@@ -1,9 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { category } from '@/data/category'
 import { CategorySummaryCardContainer, CategorySummaryCardImage, CategorySummaryCardLink } from './category.style'
-import { Header3 } from 'global.style'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 type CategorySummaryCardProps = {
@@ -37,8 +34,8 @@ const CategorySummaryCard = ({
                     alt={title}
                     src={imageUrl}
                     layout="responsive"
-                    width={200}
-                    height={200}
+                    width="100%"
+                    height="100%"
                 />
             </CategorySummaryCardImage>
             <div 

@@ -9,6 +9,8 @@ import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import config from '../config'
 import CheckOutForm from '@/features/checkout/components/CheckOutForm'
+import FullScreenLoader from '@/components/FullScreenLoader/FullScreenLoader'
+import { withAuthUser, AuthAction } from 'next-firebase-auth'
 
 const stripePromise = loadStripe(config.publicKey as string);
 
@@ -47,4 +49,9 @@ const Checkout = () => {
   )
 }
 
-export default Checkout
+export default withAuthUser({
+  whenUnauthedAfterInit: AuthAction.REDIRECT_TO_LOGIN,
+  authPageURL: '/auth',
+  whenUnauthedBeforeInit: AuthAction.SHOW_LOADER,
+  LoaderComponent: FullScreenLoader,
+})(Checkout)

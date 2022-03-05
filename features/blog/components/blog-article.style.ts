@@ -21,6 +21,10 @@ export const Blog = styled.div`
     h3 {
         margin-bottom: 1rem;
     }
+
+    button {
+        justify-self: flex-start ;
+    }
 `
 
 export const BlogImage = styled.div`

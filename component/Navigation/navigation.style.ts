@@ -87,7 +87,10 @@ export const NavLink = styled.li`
         text-transform: capitalize;
         font-weight: bold;
         cursor: pointer;
+        position: relative;
         font-size: 2rem;
+
+        
     }
 
     &:hover {
@@ -96,7 +99,17 @@ export const NavLink = styled.li`
     &.active {
         color: black;
     }
+
+    div {
+        font-size: 1.2rem ;
+
+        @media ${device.tabletPort} {
+            background-color: ${({theme}) => theme.colors.primaryLight};
+            color: black ;
+        }
+    }
 `
+
 
 export const NavHeader = styled.div`
 

@@ -76,6 +76,7 @@
     justify-items: flex-start;
     grid-auto-rows: min-content min-content;
     align-items: center;
+    height: 40vw
     
 
 }
@@ -111,11 +112,14 @@
 
 .storyImage2 {
     width: 115%;
-    grid-row: 4 / 7;
+    grid-row: 4 / 9;
     grid-column: 4 / 7;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
     z-index: 10;
+    background-color: blue;
     position: relative;
+    height: 115%;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {

@@ -4,5 +4,6 @@
     grid-template-columns: inherit;
     grid-template-rows: min-content 1fr;
     row-gap: 2rem;
+    margin-bottom: 3rem;
 
 }

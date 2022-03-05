@@ -1,42 +1,5 @@
-export const blogArticle = [{
-            "pageurl": "http://www.chicintuition.com/?p=3665",
-            "record": {
-                "uniq_id": "bbaecca83d1d736f9210be68fb4fcc24",
-                "crawl_timestamp": "2018-02-01 07:27:33 +0000",
-                "domain_name": {
-                    "chicintuition": {
-                        "Chic_Alert": {
-                            "post_url": "http://www.chicintuition.com/?p=3665",
-                            "title": "Mike & Chris @ Singer22",
-                            "post_timestamp_parsed": "2009/04/12",
-                            "post_timestamp_unparsed": "April 12, 2009 ",
-                            "image_urls": ["http://www.chicintuition.com/wp-content/uploads/2009/04/mike-and-chris.jpg"],
-                            "post_text_content": "April 12, 2009 | Tags: Chic Alert *Image courtesy of singer22.com",
-                            "comments": []
-                        }
-                    }
-                }
-            }
-        }, {
-            "pageurl": "http://www.chicintuition.com/?p=11270",
-            "record": {
-                "uniq_id": "07e734ae8d8886f81cb982eadcfab601",
-                "crawl_timestamp": "2018-02-01 07:03:41 +0000",
-                "domain_name": {
-                    "chicintuition": {
-                        "Celeb_Chic": {
-                            "post_url": "http://www.chicintuition.com/?p=11270",
-                            "title": "A simple shirt and skinnies…",
-                            "post_timestamp_parsed": "2011/11/02",
-                            "post_timestamp_unparsed": "November 2, 2011 ",
-                            "image_urls": ["http://www.chicintuition.com/wp-content/uploads/2011/11/mk-olsen-blouse.jpg"],
-                            "post_text_content": "November 2, 2011 | Tags: Celeb Chic *Image courtesy of olsensanonymous.blogspot.com . Graphics courtesy of Chic Intuition LLC.",
-                            "comments": []
-                        }
-                    }
-                }
-            }
-        }, {
+export const blogArticle = [
+{
             "pageurl": "http://www.chicintuition.com/?p=5939",
             "record": {
                 "uniq_id": "da4cd25ca4591a10326d143908d53555",

@@ -59,8 +59,10 @@ const Blog = () => {
                     <div className={style.postImage}>
                         <Image
                             src='https://wpbingosite.com/wordpress/mojuri/wp-content/uploads/2018/05/Untitled-2_01.jpg'
-                            layout="fill"
+                            layout="responsive"
                             objectFit="cover"
+                            width="100%"
+                            height="100%"
                         />
                     </div>
                         <div className={style.postDetails}>
@@ -83,17 +85,21 @@ const Blog = () => {
                     </Header3>
                 </div>
                 <ul className={style.categories}>
-                    <li className={style.category}>
-                        Backend(4)
+                <li className={style.category}>
+                        <span>February</span>
+                        <span>(4)</span>
                     </li>
                     <li className={style.category}>
-                        Backend(4)
+                        <span>March</span>
+                        <span>(4)</span>
                     </li>
                     <li className={style.category}>
-                        Backend(4)
+                        <span>December</span>
+                        <span>(4)</span>
                     </li>
                     <li className={style.category}>
-                        Backend(4)
+                        <span>November</span>
+                        <span>(4)</span>
                     </li>
                 </ul>
             </div>

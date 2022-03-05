@@ -1,8 +1,9 @@
 import { AuthUser } from "@/features/auth/type";
 import { NextApiRequest, NextApiResponse } from "next";
 import { checkAuth } from "../middleware/checkAuth";
-import User from "@/model/User";
 import dbConnect from "@/lib/dbConnect";
+import WishList from "@/model/WishList";
+import { WishListItemProps } from "@/features/wishlist/types";
 
 export default async function cartHandler(
   req: NextApiRequest,
@@ -13,7 +14,7 @@ export default async function cartHandler(
     await dbConnect();
 
     let currentUser: AuthUser | undefined = undefined;
-    let items: any = [];
+    let wishListItems: WishListItemProps[] = [];
 
     const response = await checkAuth(req, res);
 
@@ -23,14 +24,14 @@ export default async function cartHandler(
 
     switch (method) {
       case "GET":
-        const findUser = await User.findOne({
-          id: currentUser?.id,
+        const findWishListItem = await WishList.find({
+          ownerId: currentUser?.id,
         });
 
-        if (findUser) {
-          items = findUser.cartItems;
+        if (findWishListItem) {
+          wishListItems = findWishListItem;
         }
-        res.status(200).json({ message: items });
+        res.status(200).json({ message: wishListItems });
         break;
       default:
         res.setHeader("Allow", ["GET"]);

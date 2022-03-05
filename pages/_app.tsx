@@ -11,6 +11,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AppProps } from 'next/app'
 import { RouteGuard } from 'routes'
 import FirebaseAuthState from '@/features/auth/components/FirebaseAuthState'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react'
+import initAuth from '@/utils/initAuth'
+
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -98,8 +103,18 @@ const theme = {
 }
 
 
-// Custom App to wrap it with context provider
+
+initAuth()
+
 export default function App({ Component, pageProps }: AppProps) {
+
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
+    });
+  }, []);
   return (
     <Provider>
       <FuegoProvider fuego={fuego}>

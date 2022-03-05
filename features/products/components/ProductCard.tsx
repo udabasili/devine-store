@@ -22,8 +22,8 @@ const ProductCard = ({
                 alt={name}
                 src={imageUrl}
                 layout="responsive"
-                width={300}
-                height={300}
+                width="100%"
+                height="100%"
                 objectFit="cover"
             /> 
             <Badge variant="success">

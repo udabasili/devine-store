@@ -44,8 +44,8 @@ const FormComponent =
             console.log(values)
             await onSubmitHandler(values)
             setLoading(false)
-            if (router.pathname === "/auth" ){
-              const returnUrl = router.query?.returnUrl || '/';
+            if (router.pathname === "/auth"  && router.query?.returnUrl){
+              const returnUrl = router.query?.returnUrl;
                 router.push(returnUrl as string);
               }
            } catch (error) {

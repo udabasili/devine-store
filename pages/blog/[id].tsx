@@ -33,8 +33,10 @@ const BlogDetail = () => {
                 <Image
                       src='https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
                       alt={record["title"]}
-                      layout="fill"
+                      layout="responsive"
                       objectFit="cover"
+                      width="100%"
+                      height="100%"
                   />
               </ArticleMainImage>
               <ArticleText>
@@ -47,14 +49,18 @@ const BlogDetail = () => {
                 <Image
                       src='https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
                       alt={record["title"]}
-                      layout="fill"
+                      layout="responsive"
                       objectFit="cover"
+                      width="100%"
+                      height="100%"
                   />
                   <Image
                       src='https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
                       alt={record["title"]}
-                      layout="fill"
+                      layout="responsive"
                       objectFit="cover"
+                      width="100%"
+                      height="100%"
                   />
                 </ArticleOtherImages>
             </Article> :

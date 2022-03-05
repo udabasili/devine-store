@@ -15,15 +15,15 @@ import { useRouter } from 'next/router';
 const summary = [
   {
     text: 'new arrival',
-    image: 'https://images.unsplash.com/photo-1509319117193-57bab727e09d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+    image: 'https://images.unsplash.com/photo-1509319117193-57bab727e09d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=50'
   },
   {
     text: 'best seller',
-    image: 'https://images.unsplash.com/photo-1589828994425-cee7c6e8dbf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1212&q=80'
+    image: 'https://images.unsplash.com/photo-1589828994425-cee7c6e8dbf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=50'
   }, 
   {
     text: 'clearance',
-    image: 'https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80'
+    image: 'https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=50'
   }
 
 ]
@@ -74,14 +74,22 @@ const Home : React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ image
         <div className={style.storyImage1}>
           <Image
             objectFit="cover"
-            src='https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80'
-            layout="fill"/>
+            data-aos="fade-in"
+            src='https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=50'
+            layout="responsive"
+            width="100%"
+            height="100%"
+            />
         </div>
         <div className={style.storyImage2}>
         <Image
           objectFit="cover"
-          src='https://images.unsplash.com/photo-1556306535-0f09a537f0a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
-          layout="fill"/>
+          layout="responsive"
+          width="100%"
+          height="100%"
+          data-aos="fade-in"
+          src='https://images.unsplash.com/photo-1556306535-0f09a537f0a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=50'
+          />
         </div>
       </section>
       <section id='story'  className={style.storyContent}>
@@ -111,7 +119,6 @@ const Home : React.FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ image
         <ProductSummary/>
       </section>
       <section id='reviews'  className={style.section}>
-
       </section>
       <section id='subscribe'  className={style.section}>
 

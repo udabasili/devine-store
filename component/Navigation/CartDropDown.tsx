@@ -8,22 +8,12 @@ import { BsCart } from "react-icons/bs";
 import { toast } from "react-toastify";
 import { Badge, CartDropDownContainer, CartIcon } from "./cart.style";
 
-function CartDropDown() {
-    
+type CartDropDownProps = {
+  cartValues: CartItemProp[];
+};
+function CartDropDown(props: CartDropDownProps) {
+  const { cartValues } = props;
   const { setShowDropDown, showDropDown } = useContext(Context);
-  const { data, isError, isLoading } = useSwr<CartItemProp[]>("/api/cart");
-  let cartValues: CartItemProp[] = [];
-
-  if (isError) {
-    toast.error(isError);
-    return <></>;
-  }
-
-  console.log(isLoading)
-
-  if (data) {
-    cartValues = data;
-  }
 
   return (
     <>

@@ -22,6 +22,8 @@ import addToCart from "@/features/cart/api/addToCart";
 import { toast } from "react-toastify";
 import { auth } from "@/lib/firebaseClient";
 import { useSWRConfig } from "swr";
+import addToWishlist from "@/features/wishlist/api/addToWishlist";
+import { useAuthUser, withAuthUser, withAuthUserTokenSSR } from "next-firebase-auth";
 
 const shoeSizes = [6, 7, 8, 8.5, 9, 10, 10.5, 11, 11.5, 12, 13];
 
@@ -32,6 +34,7 @@ const Product = () => {
   const [isLoading, setLoading] = useState(false);
   const router = useRouter();
   const { product } = router.query;
+  const AuthUser = useAuthUser()
   const selectedProduct = getAllClothings().find(
     (prod) => prod.id === Number(product)
   ) as ProductCardProps;
@@ -47,7 +50,10 @@ const Product = () => {
       price: selectedProduct.price,
     };
     try {
-      const token = (await auth.currentUser?.getIdToken(true)) as string;
+      if (!AuthUser.email) {
+        toast.warn('Only logged in users are allowed to perform this action')
+        return
+      }
       await addToCart(data);
       mutate('/api/cart')
       setLoading(false);
@@ -58,6 +64,32 @@ const Product = () => {
       toast.error(errorObject.message);
     }
   };
+
+  async function addProductToWishlist () {
+    const data = {
+      itemId: selectedProduct.id,
+      imageUrl: selectedProduct.imageUrl,
+      itemName: selectedProduct.name,
+      price: selectedProduct.price,
+    };
+    try {
+      if (!AuthUser.email) {
+        toast.warn('Only logged in users are allowed to perform this action')
+        return
+      }
+      await addToWishlist(data);
+      mutate('/api/wishlist')
+      setLoading(false);
+      toast.success("Added To WishList");
+    } catch (error) {
+      setLoading(false);
+      const errorObject = error as Error;
+      toast.error(errorObject.message);
+    }
+
+  }
+
+  
 
   function reduceQuantity() {
     if (quantity === 1) {
@@ -78,8 +110,10 @@ const Product = () => {
         <ProductDetailImage>
           <Image
             src={selectedProduct.imageUrl}
-            layout="fill"
+            layout="responsive"
             objectFit="cover"
+            width="100%"
+            height="100%"
             alt={selectedProduct.name}
           />
         </ProductDetailImage>
@@ -119,7 +153,7 @@ const Product = () => {
             Add to cart
           </Button>
           <span className="wishlist selected">
-            <AiFillHeart fontSize="2.4rem" />
+            <AiFillHeart fontSize="2.4rem"  onClick={addProductToWishlist}/>
           </span>
         </ProductButtons>
       </ProductDetail>
@@ -127,10 +161,13 @@ const Product = () => {
   );
 };
 
-export async function getServerSideProps(context: Context<any>) {
+
+
+export const getServerSideProps = withAuthUserTokenSSR()(
+  async ({ AuthUser }) => { 
   return {
     props: {},
   };
-}
+})
 
-export default Product;
+export default withAuthUser()(Product)

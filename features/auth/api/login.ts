@@ -1,6 +1,4 @@
-import { UserResponse } from '@/features/auth/type';
-import axios from 'axios';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export type LoginCredentialsDTO = {
     email: string;

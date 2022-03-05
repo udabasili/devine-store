@@ -10,12 +10,15 @@ export const Article = styled.div`
     h2 {
         grid-column: 1 / -1;
         text-align: center;
+        padding: 2rem 5vh ;
+        padding-top: 15vh ;
     }
 `
 
 export const ArticleMainImage = styled.div`
     display: grid;
     position: relative;
+    padding-top: 5vh ;
     grid-column: center-start / center-end;
     height: 40vh;
 
@@ -29,7 +32,16 @@ export const ArticleMainImage = styled.div`
 `
 
 export const ArticleText = styled.div`
+    padding: 4rem;
+    padding-top: 10rem ;
     grid-column: col-start 3 / full-end;
+    grid-row: 3 ;
+
+    @media ${device.tabletPort} {
+        grid-column: 1 / -1;
+
+    }
+
 `
 
 export const ArticleOtherImages = styled.div`
@@ -40,4 +52,11 @@ export const ArticleOtherImages = styled.div`
     grid-template-rows: repeat(2, min-content);
     padding: 6rem;
     gap: 8rem;
+    grid-row: 3 ;
+
+    @media ${device.tabletPort} {
+        grid-column: 1 / -1;
+        grid-row: unset ;
+
+    }
 `
