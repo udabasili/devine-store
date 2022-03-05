@@ -37,4 +37,15 @@ async function authRequestInterceptor(config: AxiosRequestConfig) {
   return customConfig;
 }
 
-export const fetcher = (url: string)=> apiCall.get(url).then(res => res.data.message)
+export const fetcher = async (url: string) => {
+  const token = await auth.currentUser?.getIdToken(true)
+
+  return fetch(url, {
+    headers: { 
+      authorization: token || ''
+    }
+  }).then((res) => res.json()).then(res => res.message)
+}
+
+
+// export const fetcher = (url: string)=> fe.get(url).then(res => res.data.message)
