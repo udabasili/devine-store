@@ -22,10 +22,4 @@ const cors = initMiddleware(
   })
 )
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Run cors
-  await cors(req, res)
-
-  // Rest of the API logic
-  res.json({ message: 'Hello Everyone!' })
-}
+export default cors
