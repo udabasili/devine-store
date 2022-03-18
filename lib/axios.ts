@@ -18,7 +18,7 @@ interface CustomRequestProps extends AxiosRequestConfig {
 
 
 export const apiCall = Axios.create({
-    baseURL: url,
+    baseURL: '/',
 });
 
 apiCall.interceptors.request.use(authRequestInterceptor)

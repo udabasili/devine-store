@@ -1,7 +1,6 @@
 import { init } from 'next-firebase-auth'
 import config from '../config'
 
-console.log(process.env.FIREBASE_PRIVATE_KEY)
 const initAuth = () => {
   init({
     authPageURL: '/auth',
@@ -19,7 +18,9 @@ const initAuth = () => {
         projectId: config.firebaseAdminCredential.projectId as string,
         clientEmail: config.firebaseAdminCredential.clientEmail as string,
         // The private key must not be accessible on the client side.
-        privateKey: JSON.parse(process.env.FIREBASE_PRIVATE_KEY as string),
+        privateKey: process.env.FIREBASE_PRIVATE_KEY
+        ? JSON.parse(process.env.FIREBASE_PRIVATE_KEY)
+        : undefined
       },
       databaseURL: config.firebaseDatabaseUrl as string,
     },

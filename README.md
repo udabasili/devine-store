@@ -7,7 +7,6 @@ Devine Store is the blueprint of a  sample clothing online built for a client. I
 - Authentication
 - Viewing products in categories and adding them to the cart
 - Simulating order checkout with a sample credit card number
-- To test the payment, use 4242 4242 4242 4242 as card number at the checkout
 - Fashion Blog
 
 ## Tech
@@ -28,6 +27,6 @@ The best way is to visit the Heroku website for the deployed website  [Devine St
 
 ## Images
 
-![Screenshot(1)](https://user-images.githubusercontent.com/33573587/121123619-e81e0e00-c7f9-11eb-9021-77c89cfd2d4c.png)
-![Screenshot](https://user-images.githubusercontent.com/33573587/121123620-e8b6a480-c7f9-11eb-8933-6a4930182846.png)
-![Screenshot_2020-12-25 Devine Store](https://user-images.githubusercontent.com/33573587/121123621-e94f3b00-c7f9-11eb-8905-d5947152f942.png)
+![Screenshot(1)](https://user-images.githubusercontent.com/33573587/158959115-4510653e-ef51-48e3-a48c-39350559c5b7.png)
+![Screenshot](https://user-images.githubusercontent.com/33573587/158959267-cdf9c6a0-b8c6-4b3f-949b-12c55319034f.png)
+![Screenshot_2020-12-25 Devine Store](https://user-images.githubusercontent.com/33573587/158959115-4510653e-ef51-48e3-a48c-39350559c5b7.png)
