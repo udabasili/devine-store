@@ -23,10 +23,10 @@ Devine Store uses several open-source projects to work properly:
 
 ### To Run
 
-The best way is to visit the Heroku website for the deployed website  [Devine Store](https://top-fashion.herokuapp.com/).
+The best way is to visit the Heroku website for the deployed website  [Devine Store](https://devine-store.vercel.app).
 
 ## Images
 
-![Screenshot(1)](https://user-images.githubusercontent.com/33573587/158959115-4510653e-ef51-48e3-a48c-39350559c5b7.png)
 ![Screenshot](https://user-images.githubusercontent.com/33573587/158959267-cdf9c6a0-b8c6-4b3f-949b-12c55319034f.png)
+![Screenshot(1)](https://user-images.githubusercontent.com/33573587/158959172-a3bb75b0-a7bc-4ff0-bc3b-89904e065680.png)
 ![Screenshot_2020-12-25 Devine Store](https://user-images.githubusercontent.com/33573587/158959115-4510653e-ef51-48e3-a48c-39350559c5b7.png)
